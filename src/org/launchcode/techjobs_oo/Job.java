@@ -72,6 +72,10 @@ public class Job {
         return coreCompetency;
     }
 
+    public int getId() {
+        return id;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
