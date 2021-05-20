@@ -29,4 +29,11 @@ public class JobTest {
         Boolean equalityCheck = testJob2.equals(testJob1);
         assertFalse(equalityCheck);
     }
+    @Test
+    public void testToString() {
+        Job testJob = new Job("Football Player",new Employer("Denver Broncos"),new Location("Denver"),new PositionType("Quarterback"), new CoreCompetency("Determination"));
+        System.out.println(testJob.getId());
+        String expectedOutput = "\r\nID: 1\r\nName: Football Player\r\nEmployer: Denver Broncos\r\nLocation: Denver\r\nPosition Type: Quarterback\r\nCore Competency: Determination\r\n";
+        assertEquals(expectedOutput,testJob.toString());
+    }
 }

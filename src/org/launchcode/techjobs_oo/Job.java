@@ -49,6 +49,58 @@ public class Job {
         return Objects.hash(id);
     }
 
+    @Override
+    public String toString() {
+        String returnString;
+        String jobName;
+        String jobEmployer;
+        String jobLocation;
+        String jobPositionType;
+        String jobCoreCompetency;
+
+        if (this.name.isEmpty()) {
+            jobName = "Data not available.";
+        } else {
+            jobName = this.name;
+        }
+        if (this.getEmployer().getValue().isEmpty()) {
+            jobEmployer = "Data not available";
+        }else {
+            jobEmployer = this.getEmployer().getValue();
+        }
+        if (this.getLocation().getValue().isEmpty()) {
+            jobLocation = "Data not available";
+        }else {
+            jobLocation = this.getLocation().getValue();
+        }
+        if (this.getPositionType().getValue().isEmpty()) {
+            jobPositionType = "Data not available";
+        }else {
+            jobPositionType = this.getPositionType().getValue();
+        }
+        if (this.getCoreCompetency().getValue().isEmpty()) {
+            jobCoreCompetency = "Data not available";
+        }else {
+            jobCoreCompetency = this.getCoreCompetency().getValue();
+        }
+
+
+
+
+
+        returnString = "\r\nID: " + Integer.toString(this.id) +
+                "\r\nName: " + jobName +
+                "\r\nEmployer: " + jobEmployer +
+                "\r\nLocation: " + jobLocation +
+                "\r\nPosition Type: " + jobPositionType +
+                "\r\nCore Competency: " + jobCoreCompetency + "\r\n";
+
+        return returnString;
+    }
+
+
+
+
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
 
