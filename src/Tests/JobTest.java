@@ -33,7 +33,8 @@ public class JobTest {
     public void testToString() {
         Job testJob = new Job("Football Player",new Employer("Denver Broncos"),new Location("Denver"),new PositionType("Quarterback"), new CoreCompetency("Determination"));
         System.out.println(testJob.getId());
-        String expectedOutput = "\r\nID: 1\r\nName: Football Player\r\nEmployer: Denver Broncos\r\nLocation: Denver\r\nPosition Type: Quarterback\r\nCore Competency: Determination\r\n";
+        String expectedOutput = "\r\nID: " + testJob.getId() + "\r\nName: Football Player" +
+                "\r\nEmployer: Denver Broncos" + "\r\nLocation: Denver\r\nPosition Type: Quarterback\r\nCore Competency: Determination\r\n";
         assertEquals(expectedOutput,testJob.toString());
     }
 }
